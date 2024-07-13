@@ -1,0 +1,233 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+  
+}
+
+nav{
+    width:100%;
+    height:10vh;
+    background-image:linear-gradient( to top, #01080a,#01080a,#05361fe2);
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    text-transform:uppercase;
+    
+}
+
+    nav .logo {
+       
+        width: 30%;
+        text-align:center;
+        color: rgb(245, 236, 236);
+        position:relative;
+        left:-100px;
+        cursor:pointer;
+      animation:bounce2 1.5s ease-in-out infinite;
+      font-size: 20px;
+      
+
+    }
+    @keyframes bounce2{
+        0%, 100% {
+            transform: translateY(0);
+            color: red;
+          }
+          25% {
+            transform: translateY(-20px);
+            color: #21c53c;
+          }
+          50% {
+            transform: translateY(0);
+            color: #c969f6;
+          }
+          75% {
+            transform: translateY(-10px);
+            color: red;
+          }
+    }
+   
+    nav .menu {
+        width: 40%;
+        display:flex;
+        justify-content:space-around;
+        text-decoration: none;
+        font-weight: 500;
+        transition: .3s;
+        
+}
+nav .menu a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    z-index: 1;
+}
+
+nav .menu a:hover {
+    color:aquamarine;
+}
+
+nav .menu a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(35, 181, 168);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+nav .menu a:hover::before {
+    width: 100%;
+}
+
+  main{
+        width:100%;
+        height:100vh;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        color:azure;
+        text-align:center;
+        position: relative;
+        background-position:center;
+        background-size: cover;
+        padding: 70px 10% 0;
+        background-image: url("photo_2024-07-04_19-24-44.jpg");
+        background-size: cover;
+
+    }
+   .set2 h3 {
+            font-size: 35px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow: 1px 1px 5px black;
+            text-transform: uppercase;
+            
+        }
+       .set2 h1 {
+            margin: 30px 0 20px 0;
+            font-size: 55px;
+            font-weight: 700;
+            text-shadow: 2px 1px 5px black;
+            text-transform: uppercase;
+            color: red;
+        }
+        .set2 p {
+            font-size: 30px;
+            word-spacing: 2px;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-shadow: 1px 1px 5px rgb(14, 1, 1);
+          
+            text-transform: revert;
+        }
+        #p1{
+            color: chartreuse;
+        }
+        .typing-text{
+            color: darkseagreen;
+        }
+       
+        .set2 a {
+            padding: 10px 30px;
+            border-radius: 4px;
+            text-transform: revert;
+            font-size: 15px;
+            font-family: 'Amita', cursive;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 500;
+            text-shadow: 1px 1px 5px black;
+            letter-spacing: 1px;
+            transition:all .10s ease;
+        }
+      
+      .set2 .btnone {
+            background: green;
+            color: black;
+        }
+       .btnone:hover {
+         background: yellow;
+        color:black;
+          }
+   .btntwo{
+    padding:5px 20px;
+    background: white;
+         color: red;
+         border-radius: 25%;
+          }
+.btntwo:hover {
+         background:green;
+         color: black;
+         }
+.change_content::after {
+    content: '';
+    animation: changetext 10s infinite linear;
+    color: red;
+    font-family: 'Italianno', cursive;
+    text-transform:uppercase;
+}
+@keyframes changetext{
+    0%{content:"Creator";}
+    25% {
+        content: "Designer";
+    }
+    50% {
+        content: "Creator";
+    }
+    100% {
+        content: "Designer";
+    }
+    
+    
+}
+.typing-text::after {
+    content: "|";
+    display: inline-block;
+    animation: blink-caret 3s infinite;
+   
+}
+
+@keyframes blink-caret {
+    50% {
+        opacity: 0;
+    }
+}
+@keyframes  blink-caret {
+    0% {
+      color: aqua;
+      transform: translateX(-100%);
+    }
+    50% {
+        color: rgb(228, 148, 161);
+       
+      }
+
+    100% {
+        color: rgb(230, 114, 230);
+        transform: translateX(100%);
+    }
+}
+@media (max-width: 768px) {
+    nav .logo {
+        font-size: 18px;
+    }
+
+    .set2 h1 {
+        font-size: 32px;
+    }
+
+    .set2 p {
+        font-size: 16px;
+    }
+
+    .set2 a {
+        font-size: 12px;
+    }
+}

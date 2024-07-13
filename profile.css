@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+    
+}
+
+.team {
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#08010a,#1e0627,#3a0940,#651d6e,#9922a9);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.team-content {
+    width: 100%;
+    max-width:400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.center h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-align: center;
+    animation: slideText 4s linear infinite alternate;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@keyframes slideText {
+    0% {
+      color: aqua;
+      transform: translateX(-100%);
+    }
+    50% {
+        color: rgb(228, 148, 161);
+       
+      }
+
+    100% {
+        color: rgb(230, 114, 230);
+        transform: translateX(100%);
+    }
+}
+
+.box {
+    padding: 16px;
+   
+    background-image: linear-gradient(#210449,#000);
+    border-radius: 15px;
+    transition: all .38s ease;
+    position: relative;
+    right: 80%;
+    top: -10%;
+ 
+
+}
+
+    .box h3 {
+        font-size: 10px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 8px;
+    }
+
+    .box h5 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #b7b4bb;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+    }
+
+.icons i {
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 8px;
+    transition: all .38s ease;
+}
+
+    .icons i:hover {
+        transform: scale(1.2);
+    }
+    .box:hover {
+        transform: translateY(-10px);
+        cursor: pointer;
+    }
+    
+
+@media(max-width: 1240px) {
+    .team {
+        width:100%;
+        height: auto;
+        padding: 90px 2%;
+    }
+
+    .center h1 {
+        font-size: 3.2rem;
+    }
+}
+.text p{
+
+width: 500px;
+margin-top: -80%;
+margin-left: 50%;
+font-size:  18px;
+color: azure;
+overflow: hidden;
+animation: typing 3s steps(50);
+cursor:  .4s step-end infinite alternate;
+ }
+ @keyframes cursor{
+    50%{
+        border-color: transparent;
+    }
+
+ }
+ @keyframes typing{
+    from{
+        height: 0px;
+        color: aquamarine;
+    }
+    to{
+        height: 200px;
+        color: #fff;
+    }
+}
+
